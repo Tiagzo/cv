@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Estéban Poumey</title>
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-address-card"></i>
+                    <div class="logo-text">Estéban Poumey</div>
+                </div>
+                <nav>
+                    <div class="toggle-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="resume.html">Resumé</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="assets/img/photoprofile.jpg" alt="photo de profile">
+                </div>
+                <div class="hero-text">
+                    <h1>Estéban Poumey</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus, quod. Fugiat optio, nostrum perspiciatis provident beatae odit placeat obcaecati alias sint, corporis nobis nihil asperiores quod labore, earum temporibus vel.</p>
+                    <h5>Bonjour je souhaite me former en tant que <span class="input">Développeur Web</span></h5>
+                    <div class="btn-group">
+                        <a href="assets/img/cv.pdf" class="btn active">Télécharger mon CV</a>
+                        <a href="contact.html" class="btn">Contact</a>
+                    </div>
+                    <div class="social">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                        <a href=""><i class="fa-brands fa-dribble"></i></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+       <!-- Librairie typed js pour animation du texte  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /* Script permettant l'animation du bouton & activer/desactiver la navbar */
+        var togglebtn=document.querySelector(".toggle-btn");
+        var nav=document.querySelector(".nav-links");
+        var links=document.querySelector(".nav-links li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open"); 
+        })
+       /* Script animation du texte  */
+        var typed=new Typed(".input",{
+            strings:["Développeur Web", "Développeur Back-end", "Développeur Front-end", "Développeur Fullstack"],
+            typeSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+    </script>
+</body>
+</html>
